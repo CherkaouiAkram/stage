@@ -26,7 +26,13 @@ function load(){
           maxZoom: 19,
           attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
         }).addTo(mymap);
-  L.geoJSON(linesZ).addTo(mymap);
+  var myStyle = { 
+                  "color":"#ff7800",
+                  "weight":5,
+                  "opacity":0.65   
+                };
+  L.geoJSON(linesZ,{
+    style:myStyle}).addTo(mymap);
 }
 
 /*function a(text){
