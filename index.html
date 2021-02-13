@@ -7,16 +7,31 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <!-- Load jQuery and PapaParse to read data from a CSV file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
+
 <div id="mapid"></div>
 
-<!-- Make sure you put this AFTER Leaflet's CSS -->
+<div class="nav">
+    <input type="checkbox">
+      <span></span>
+      <span></span>
+      <h3>show distance</h3>
+      <div class="menu">
+        <li><a href="#"> Distance (in pixel):<p id="distance"></p></a></li>
+        <li><a href="#">Length (in meters): <p id="length"></p></a></li>
+      </div>
+  </div>
+  
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+<script src="https://npmcdn.com/leaflet-geometryutil"></script>
 <script src="script.js"></script>
 <script src="raster-marching-squares.min.js"></script>
 </body>
